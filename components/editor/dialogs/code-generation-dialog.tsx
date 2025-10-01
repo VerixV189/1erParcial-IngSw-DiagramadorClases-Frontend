@@ -151,7 +151,7 @@ export function CodeGenerationDialog({ isOpen, onClose, classes, relationships }
                       </Button>
                     </div>
 
-                    <ScrollArea className="h-[400px] border rounded-md">
+                    <ScrollArea className="h-[230px] border rounded-md">
                       <div className="p-4 space-y-4">
                         {generatedCode.map((file, index) => (
                           <Card key={index}>
@@ -214,7 +214,7 @@ export function CodeGenerationDialog({ isOpen, onClose, classes, relationships }
 
                 {generatedSQL && (
                   <div className="flex-1 overflow-hidden">
-                    <ScrollArea className="h-[500px] border rounded-md">
+                    <ScrollArea className="h-[250px] border rounded-md">
                       <div className="p-4">
                         <pre className="text-sm bg-muted p-4 rounded-md overflow-x-auto">
                           <code>{generatedSQL}</code>

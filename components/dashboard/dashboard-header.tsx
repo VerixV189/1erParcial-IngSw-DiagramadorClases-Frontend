@@ -48,7 +48,7 @@ export function DashboardHeader({ user, onSignOut }: DashboardHeaderProps) {
               <Button variant="ghost" className="relative h-8 w-8 rounded-full" type="button">
                 <Avatar className="h-8 w-8">
                   <AvatarImage
-                    src={user.user_metadata?.avatar_url || "/placeholder-logo.jpg"}
+                    src={user.user_metadata?.avatar_url || ""}
                     alt={user.user_metadata?.full_name || user.email}
                   />
                   <AvatarFallback>{userInitials}</AvatarFallback>

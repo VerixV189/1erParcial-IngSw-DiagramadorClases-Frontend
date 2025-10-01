@@ -230,60 +230,6 @@ export function EditorSidebar({ isOpen, onToggle, onAIGenerate, umlClasses, onCr
 
           <Separator />
 
-          {/* Relationship Types - Now draggable */}
-          <div className="space-y-3">
-            <h3 className="text-sm font-medium text-muted-foreground">Relationships</h3>
-            <p className="text-xs text-muted-foreground">Drag to canvas or connect nodes directly</p>
-
-            <div className="grid grid-cols-2 gap-2">
-              <Card
-                className="p-2 text-center cursor-grab active:cursor-grabbing hover:shadow-md transition-shadow"
-                draggable
-                onDragStart={(e) => onRelationshipDragStart(e, "inheritance")}
-              >
-                <div className="flex items-center justify-center gap-1 text-xs">
-                  <ArrowRight className="h-3 w-3" />
-                  <span>Inheritance</span>
-                </div>
-              </Card>
-
-              <Card
-                className="p-2 text-center cursor-grab active:cursor-grabbing hover:shadow-md transition-shadow"
-                draggable
-                onDragStart={(e) => onRelationshipDragStart(e, "composition")}
-              >
-                <div className="flex items-center justify-center gap-1 text-xs">
-                  <Diamond className="h-3 w-3" />
-                  <span>Composition</span>
-                </div>
-              </Card>
-
-              <Card
-                className="p-2 text-center cursor-grab active:cursor-grabbing hover:shadow-md transition-shadow"
-                draggable
-                onDragStart={(e) => onRelationshipDragStart(e, "aggregation")}
-              >
-                <div className="flex items-center justify-center gap-1 text-xs">
-                  <Diamond className="h-3 w-3" />
-                  <span>Aggregation</span>
-                </div>
-              </Card>
-
-              <Card
-                className="p-2 text-center cursor-grab active:cursor-grabbing hover:shadow-md transition-shadow"
-                draggable
-                onDragStart={(e) => onRelationshipDragStart(e, "association")}
-              >
-                <div className="flex items-center justify-center gap-1 text-xs">
-                  <ArrowRight className="h-3 w-3" />
-                  <span>Association</span>
-                </div>
-              </Card>
-            </div>
-          </div>
-
-          <Separator />
-
           {/* AI Tools */}
           <div className="space-y-3">
             <h3 className="text-sm font-medium text-muted-foreground">AI Tools</h3>
@@ -310,19 +256,6 @@ export function EditorSidebar({ isOpen, onToggle, onAIGenerate, umlClasses, onCr
           </div>
 
           <Separator />
-
-          {/* Quick Actions */}
-          <div className="space-y-3">
-            <h3 className="text-sm font-medium text-muted-foreground">Quick Actions</h3>
-
-            <Button variant="outline" className="w-full justify-start bg-transparent" size="sm">
-              Auto Layout
-            </Button>
-
-            <Button variant="outline" className="w-full justify-start bg-transparent" size="sm">
-              Validate Diagram
-            </Button>
-          </div>
         </div>
       </ScrollArea>
 

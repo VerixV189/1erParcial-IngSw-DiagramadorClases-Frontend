@@ -127,13 +127,6 @@ export function AIGenerationDialog({ isOpen, onClose, onGenerate }: AIGeneration
     setIsRecording(false)
   }
 
-  const examplePrompts = [
-    "Create a simple e-commerce system with User, Product, Order, and OrderItem classes",
-    "Design a library management system with Book, Author, Member, and Loan classes",
-    "Build a social media platform with User, Post, Comment, and Like classes",
-    "Create a banking system with Account, Customer, Transaction, and Bank classes",
-  ]
-
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden">
@@ -163,23 +156,6 @@ export function AIGenerationDialog({ isOpen, onClose, onGenerate }: AIGeneration
                     className="min-h-[200px] mt-2"
                   />
                 </div>
-
-                {/* <div className="space-y-2">
-                  <Label>Example prompts:</Label>
-                  <div className="grid grid-cols-1 gap-2">
-                    {examplePrompts.map((prompt, index) => (
-                      <Card
-                        key={index}
-                        className="cursor-pointer hover:bg-muted/50 transition-colors"
-                        onClick={() => setTextPrompt(prompt)}
-                      >
-                        <CardContent className="p-3">
-                          <p className="text-sm text-muted-foreground">{prompt}</p>
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
-                </div> */}
               </div>
             </TabsContent>
 

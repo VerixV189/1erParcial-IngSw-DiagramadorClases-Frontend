@@ -79,7 +79,7 @@ export const UMLRelationshipEdge = memo(
     markerEnd,
   }: EdgeProps<UMLRelationshipData>) => {
     const [editingField, setEditingField] = useState<string | null>(null)
-    const [editValue, setEditValue] = useState("Relation")
+    const [editValue, setEditValue] = useState("")
 
     const [edgePath, labelX, labelY] = getStraightPath({
       sourceX,
